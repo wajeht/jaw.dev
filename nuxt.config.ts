@@ -5,7 +5,9 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    'nuxt-vitest',
+    '@nuxt/image'
   ],
   robots: {
     rules: {
