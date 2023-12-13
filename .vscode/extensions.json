@@ -5,6 +5,7 @@
     "antfu.iconify",
     "nuxtr.nuxtr-vscode",
     "christian-kohler.path-intellisense",
-    "vue.volar"
+    "vue.volar",
+    "nuxt.mdc"
   ]
 }
