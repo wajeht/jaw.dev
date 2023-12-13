@@ -1,7 +1,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: './src',
-  modules: ['@nuxtjs/robots'],
+  modules: [
+    '@nuxtjs/robots',
+    '@nuxtjs/tailwindcss'
+  ],
   robots: {
     rules: {
       UserAgent: '*',
