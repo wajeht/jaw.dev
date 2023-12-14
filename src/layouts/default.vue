@@ -3,7 +3,8 @@
 </script>
 
 <template>
-  <div>
+  <main>
+    <TheHeader />
     <slot />
-  </div>
+  </main>
 </template>
