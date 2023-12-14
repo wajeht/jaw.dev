@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main>
+  <main class="max-w-4xl mx-auto">
     <TheHeader />
     <slot />
   </main>

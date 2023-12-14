@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main >
     <ContentDoc>
       <template #not-found>not found</template>
     </ContentDoc>
