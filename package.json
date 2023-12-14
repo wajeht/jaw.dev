@@ -16,8 +16,10 @@
     "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.10.1",
+    "@tailwindcss/typography": "^0.5.10",
     "@vueuse/nuxt": "^10.7.0",
     "nuxt": "^3.8.2",
+    "nuxt-auth-utils": "^0.0.13",
     "nuxt-vitest": "^0.11.5",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"

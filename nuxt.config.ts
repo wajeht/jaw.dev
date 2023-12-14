@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-vitest',
     '@nuxt/image',
-    '@nuxt/content'
+    '@nuxt/content',
+    'nuxt-auth-utils'
   ],
   robots: {
     rules: {

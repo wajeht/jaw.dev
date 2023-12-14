@@ -1,13 +1,10 @@
-<template>
-  <div>
-    <slot />
-  </div>
-</template>
-
-<script lang="ts" setup>
+<script setup lang="ts">
 
 </script>
 
-<style>
-
-</style>
+<template>
+  <main>
+    <TheHeader />
+    <slot />
+  </main>
+</template>
