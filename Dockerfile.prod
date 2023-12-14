@@ -11,13 +11,13 @@ RUN npm run build
 
 FROM node:20.8.1-alpine3.17
 
-RUN apk update && apk upgrade && apk add dumb-init curl && adduser -D nuxtuser
+RUN apk update && apk upgrade && apk add dumb-init curl && adduser -D nuxt
 
-USER nuxtuser
+USER nuxt
 
 WORKDIR /usr/src/app
 
-COPY --chown=nuxtuser:nuxtuser --from=build /usr/src/app ./
+COPY --chown=nuxt:nuxt --from=build /usr/src/app ./
 
 EXPOSE 3000
 

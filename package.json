@@ -1,16 +1,29 @@
 {
-  "name": "nuxt-app",
+  "name": "jaw.dev",
   "private": true,
   "type": "module",
+  "description": "personal web space",
   "scripts": {
     "build": "nuxt build",
+    "start": "npm run db:generate && npm run db:migrate:prod && node ./.output/server/index.mjs",
     "dev": "nuxt dev",
+    "dev:docker": "npm run db:generate && npm run db:push && npm run db:seed && npm run dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "db:push": "npx prisma db push",
+    "db:generate": "npx prisma generate",
+    "db:migrate:dev": "npx prisma migrate dev",
+    "db:migrate:prod": "npx prisma migrate deploy",
+    "db:reset": "npx prisma migrate reset --force",
+    "db:seed": "npx tsx ./src/server/database/seeds/seed.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "upgrade": "npx nuxi upgrade --force"
+  },
+  "prisma": {
+    "schema": "./src/server/database/schema.prisma",
+    "seed": "npx tsx ./src/server/database/seeds/seed.ts"
   },
   "devDependencies": {
     "@nuxt/content": "^2.9.0",
