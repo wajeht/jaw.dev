@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply text-[#454545] dark:bg-black h-screen dark:text-[#d9d9d9] font-sans text-base my-10;
+  @apply text-[#454545] dark:bg-black dark:text-[#d9d9d9] font-sans text-base overflow-auto;
 }
 
 h1 {
