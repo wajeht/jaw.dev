@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     'nuxt-vitest',
     '@nuxt/image',
     '@nuxt/content',
-    'nuxt-auth-utils'
+    'nuxt-auth-utils',
+    'nuxt-icon'
   ],
   robots: {
     rules: {
