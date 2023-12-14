@@ -4,7 +4,7 @@ commit:
 	git push
 
 deploy:
-	./deploy.sh
+	./src/utils/deploy.sh
 
 up:
 	docker compose up
