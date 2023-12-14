@@ -4,7 +4,6 @@ const colorMode = useColorMode()
 
 <template>
   <select class="text-[#454545] dark:bg-black dark:text-[#d9d9d9]  font-sans text-base" v-model="colorMode.preference">
-    <option value="system">system</option>
     <option value="light">light</option>
     <option value="dark">dark</option>
   </select>

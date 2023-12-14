@@ -23,5 +23,13 @@ export default defineNuxtConfig({
       Disallow: '/',
       Comment: 'get out of here!'
     }
+  },
+  content: {
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      }
+    }
   }
 })
