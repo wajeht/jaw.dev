@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/content',
     'nuxt-auth-utils',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@nuxtjs/plausible'
   ],
   robots: {
     rules: {
@@ -25,6 +26,9 @@ export default defineNuxtConfig({
       Comment: 'get out of here!'
     }
   },
+  plausible: {
+    apiHost: 'https://plausible.jaw.dev/',
+ },
   content: {
     highlight: {
       theme: {
