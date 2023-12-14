@@ -1,5 +1,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  imports: { autoImport: true },
+  colorMode: {
+    preference: 'system',
+    fallback: 'dark',
+    classSuffix: '',
+  },
   srcDir: './src',
   modules: [
     '@nuxtjs/robots',
