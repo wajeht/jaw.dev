@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header class="mb-6">
+  <header class="mb-10">
     <h1>jaw.<span class="italic">dev</span></h1>
 
     <nav class="flex justify-between">

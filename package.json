@@ -19,6 +19,8 @@
     "db:seed": "npx tsx ./src/server/database/seeds/seed.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "update:deps": " npx npm-check -u",
+    "check:deps": "npx depcheck",
     "upgrade": "npx nuxi upgrade --force"
   },
   "prisma": {
