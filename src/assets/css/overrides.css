@@ -1,4 +1,3 @@
 pre {
-  text-wrap: wrap;
-  @apply text-sm
+  @apply text-sm whitespace-pre-wrap sm:whitespace-pre-wrap;
 }
