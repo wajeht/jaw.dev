@@ -2,7 +2,9 @@
 
 <template>
   <header class="mb-10">
-    <h1>jaw.<span class="italic">dev</span></h1>
+    <h1 class="flex items-center gap-2">
+      <Icon class="animate-wave" name="👋" /> hi there, this is <span class="italic">Jaw!</span>
+    </h1>
 
     <nav class="flex justify-between">
       <ul class="flex gap-5">
