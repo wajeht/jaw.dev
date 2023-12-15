@@ -1,9 +1,22 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed } from 'vue';
+
+const waveHand = ref(true);
+
+const computedWaveHandClasses = computed(() => {
+  if (!waveHand.value) return ''
+  return 'animate-wave';
+});
+
+function toggleWaveHand(): void {
+  waveHand.value = !waveHand.value;
+}
+</script>
 
 <template>
   <header class="mb-10">
     <h1 class="flex items-center gap-2">
-      <Icon class="animate-wave" name="👋" /> hi there, this is <span class="italic">Jaw!</span>
+      <Icon :class="computedWaveHandClasses" name="👋" @click="toggleWaveHand" role="button" /> hi there, this is <span class="italic">Jaw!</span>
     </h1>
 
     <nav class="flex justify-between">
@@ -20,7 +33,8 @@
       </ul>
 
       <div class="flex gap-5">
-        <NuxtLink class="flex items-center justify-center" to="https://www.linkedin.com/in/kyawsny/" target="_blank" title="linkedin">
+        <NuxtLink class="flex items-center justify-center" to="https://www.linkedin.com/in/kyawsny/" target="_blank"
+          title="linkedin">
           <IconCSS name="mdi:linkedin" class="text-base" />
         </NuxtLink>
 
