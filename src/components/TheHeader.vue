@@ -20,15 +20,20 @@
       </ul>
 
       <div class="flex gap-5">
-        <NuxtLink to="https://www.linkedin.com/in/kyawsny/" target="_blank">linkedin</NuxtLink>
-        <NuxtLink to="https://github.com/wajeht" target="_blank">github</NuxtLink>
+        <NuxtLink class="flex items-center justify-center" to="https://www.linkedin.com/in/kyawsny/" target="_blank" title="linkedin">
+          <IconCSS name="mdi:linkedin" class="text-base" />
+        </NuxtLink>
+
+        <NuxtLink class="flex items-center justify-center" to="https://github.com/wajeht" target="_blank" title="github">
+          <IconCSS name="mdi:github" class="text-base" />
+        </NuxtLink>
 
         <button class="flex items-center" v-if="$colorMode.value === 'dark'" @click="$colorMode.preference = 'light'">
-          <IconCSS name="carbon:sun" class="text-base" />
+          <IconCSS name="material-symbols:sunny-rounded" class="text-sm" />
         </button>
 
         <button class="flex items-center" v-if="$colorMode.value === 'light'" @click="$colorMode.preference = 'dark'">
-          <IconCSS name="carbon:moon" class="text-base" />
+          <IconCSS name="material-symbols:dark-mode-outline-rounded" class="text-base" />
         </button>
       </div>
     </nav>

@@ -1,6 +1,7 @@
 {
   "css.customData": [".vscode/tailwind.json"],
   "cSpell.words": [
+    "capdb",
     "dockerized",
     "dont",
     "nuxi",
