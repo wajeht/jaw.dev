@@ -4,12 +4,12 @@ const query: QueryBuilderParams = { path: '/blog', where: [{ layout: 'article' }
 </script>
 
 <template>
-  <main>
-    <ContentList :query="query" v-slot="{ list }">
-      <div v-for="article in list" :key="article._path">
-        <NuxtLink :to="article._path"><h2>{{ article.title }}</h2></NuxtLink>
-        <p>{{ article.description }}</p>
-      </div>
-    </ContentList>
-  </main>
+  <ContentList :query="query" v-slot="{ list }">
+    <div v-for="article in list" :key="article._path">
+      <NuxtLink :to="article._path">
+        <h2>{{ article.title }}</h2>
+      </NuxtLink>
+      <p>{{ article.description }}</p>
+    </div>
+  </ContentList>
 </template>
