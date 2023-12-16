@@ -9,6 +9,7 @@
     "nuxtjs",
     "powerlifting",
     "tailwindcss",
+    "vuejs",
     "vueuse"
   ]
 }
