@@ -16,7 +16,7 @@ function toggleWaveHand(): void {
 <template>
   <header class="mb-10 flex flex-col gap-3">
     <h1 class="flex items-center gap-2">
-      <Icon :class="computedWaveHandClasses" name="👋" @click="toggleWaveHand" role="button" /> hi there, this is <span class="italic">Jaw!</span>
+      <Icon :class="computedWaveHandClasses" name="👋" @click="toggleWaveHand" role="button" /> <span class="font-bold">hi there, this is</span> <span class="italic">Jaw!</span>
     </h1>
 
     <nav class="flex justify-between">
