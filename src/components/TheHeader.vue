@@ -1,18 +1,3 @@
-<script setup lang="ts">
-import { computed } from 'vue';
-
-const waveHand = ref(true);
-
-const computedWaveHandClasses = computed(() => {
-  if (!waveHand.value) return ''
-  return 'animate-wave';
-});
-
-function toggleWaveHand(): void {
-  waveHand.value = !waveHand.value;
-}
-</script>
-
 <template>
   <header class="mb-10 flex flex-col gap-3">
     <h1>jaw.<span class="italic">dev</span></h1>
