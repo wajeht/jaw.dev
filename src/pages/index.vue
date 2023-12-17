@@ -33,18 +33,6 @@ function toggleWaveHand(): void {
     </div>
 
     <div class="mb-10">
-      <h2>Latest Article</h2>
-      <ContentList :query="latestArticle" v-slot="{ list }">
-        <div v-for="article in list" :key="article._path">
-          <NuxtLink :to="article._path">
-            <h2>{{ article.title }}</h2>
-          </NuxtLink>
-          <p>{{ article.description }}</p>
-        </div>
-      </ContentList>
-    </div>
-
-    <div>
       <h2>Latest Project</h2>
       <ContentList :query="latestProject" v-slot="{ list }">
         <div v-for="project in list" :key="project._path">
@@ -65,5 +53,18 @@ function toggleWaveHand(): void {
         </div>
       </ContentList>
     </div>
+
+    <div>
+      <h2>Latest Article</h2>
+      <ContentList :query="latestArticle" v-slot="{ list }">
+        <div v-for="article in list" :key="article._path">
+          <NuxtLink :to="article._path">
+            <h2>{{ article.title }}</h2>
+          </NuxtLink>
+          <p>{{ article.description }}</p>
+        </div>
+      </ContentList>
+    </div>
+
   </div>
 </template>
