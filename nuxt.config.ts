@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     apiHost: 'https://plausible.jaw.dev/',
  },
   content: {
-    documentDriven: true,
+    documentDriven: false,
     highlight: {
       theme: {
         default: 'github-light',

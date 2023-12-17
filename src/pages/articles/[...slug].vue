@@ -1,3 +1,7 @@
+<script setup>
+definePageMeta({ layout: 'article' })
+</script>
+
 <template>
   <ContentDoc>
     <template #not-found>
