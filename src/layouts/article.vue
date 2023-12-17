@@ -28,7 +28,6 @@ const navigationLinks = computed(() => {
 
     <div class="flex justify-between gap-5">
       <div v-if="!navigationLinks.prev && navigationLinks.next"></div>
-      <div v-if="navigationLinks.prev && !navigationLinks.next"></div>
 
       <template v-if="navigationLinks.prev">
         <h4>
@@ -47,6 +46,8 @@ const navigationLinks = computed(() => {
           </NuxtLink>
         </h4>
       </template>
+
+      <div v-if="navigationLinks.prev && !navigationLinks.next"></div>
     </div>
   </main>
 </template>
