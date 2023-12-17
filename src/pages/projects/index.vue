@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
-const query: QueryBuilderParams = { path: '/projects', where: [{ layout: 'article' }], limit: 5, sort: [{ date: -1 }] }
+const query: QueryBuilderParams = { path: '/projects', limit: 5, sort: [{ date: -1 }] }
 </script>
 
 <template>
@@ -8,8 +8,8 @@ const query: QueryBuilderParams = { path: '/projects', where: [{ layout: 'articl
     <ContentList :query="query" v-slot="{ list }">
       <div v-for="project in list" :key="project._path">
         <h2 class="flex gap-2 items-baseline">
-          <NuxtLink class="flex gap-1 items-start" style="text-decoration: none !important;" :to="project.demo" :title="`${project.title}-demo`"
-            target="_blank">
+          <NuxtLink class="flex gap-1 items-start" style="text-decoration: none !important;" :to="project.demo"
+            :title="`${project.title}-demo`" target="_blank">
             <span class="hover:underline"> {{ project.title }} </span>
             <Icon name="↗" class="!text-sm mt-1" />
           </NuxtLink>
