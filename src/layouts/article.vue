@@ -26,7 +26,7 @@ const navigationLinks = computed(() => {
 
     <slot />
 
-    <div class="flex justify-between">
+    <div class="flex justify-between gap-5">
       <div v-if="!navigationLinks.prev && navigationLinks.next"></div>
       <div v-if="navigationLinks.prev && !navigationLinks.next"></div>
 
