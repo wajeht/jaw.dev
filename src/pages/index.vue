@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
 
 const latestProject: QueryBuilderParams = { path: '/projects', limit: 1, sort: [{ date: -1 }] }
-const latestArticle: QueryBuilderParams = { path: '/blog', limit: 1, sort: [{ date: -1 }] }
+const latestArticle: QueryBuilderParams = { path: '/articles', limit: 1, sort: [{ date: -1 }] }
 const waveHand = ref(true);
 
 const computedWaveHandClasses = computed(() => !waveHand.value ? '' : 'animate-wave');
