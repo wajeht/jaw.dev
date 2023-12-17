@@ -38,13 +38,13 @@
         <button name="light" key="light" class="flex items-center" v-if="$colorMode.value === 'dark'"
           @click="$colorMode.preference = 'light'">
           <IconCSS name="material-symbols:sunny-rounded"
-            class="text-sm text-[#454545] dark:text-[#d9d9d9] hover:text-black dark:hover:text-[#FFCE48]" />
+            class="text-sm text-[#454545] dark:text-[#d9d9d9] dark:hover:text-[#FFCE48]" />
         </button>
 
         <button name="dark" key="dark" class="flex items-center" v-if="$colorMode.value === 'light'"
           @click="$colorMode.preference = 'dark'">
           <IconCSS name="material-symbols:dark-mode"
-            class="text-sm text-[#454545] dark:text-[#d9d9d9] hover:text-black dark:hover:text-[#0A66C2]" />
+            class="text-sm text-[#454545] dark:text-[#d9d9d9] hover:text-[#0A66C2]" />
         </button>
       </div>
     </nav>
