@@ -4,7 +4,7 @@
 
 body {
   font-family: "Open Sans", sans-serif, Arial;
-  @apply text-[#454545] dark:bg-black dark:text-[#d9d9d9] text-base overflow-auto transition-all duration-300;
+  @apply text-[#454545] dark:bg-black dark:text-[#d9d9d9] bg-[#FFFFFF] text-base overflow-auto transition-all duration-300;
 }
 
 h1 {
