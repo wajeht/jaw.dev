@@ -27,21 +27,25 @@ const navigationLinks = computed(() => {
     <slot />
 
     <div class="flex justify-between">
-      <p v-if="!navigationLinks.prev && navigationLinks.next"></p>
-      <p v-if="navigationLinks.prev && !navigationLinks.next"></p>
+      <div v-if="!navigationLinks.prev && navigationLinks.next"></div>
+      <div v-if="navigationLinks.prev && !navigationLinks.next"></div>
 
       <template v-if="navigationLinks.prev">
-        <NuxtLink :to="navigationLinks.prev._path" class="order-first">
-          <IconCSS name="mdi:arrow-left" class="me-[.5]" />
-          {{ navigationLinks.prev.title }}
-        </NuxtLink>
+        <h4>
+          <NuxtLink :to="navigationLinks.prev._path" class="order-first">
+            <IconCSS name="mdi:arrow-left" class="me-[.5]" />
+            {{ navigationLinks.prev.title }}
+          </NuxtLink>
+        </h4>
       </template>
 
       <template v-if="navigationLinks.next">
-        <NuxtLink :to="navigationLinks.next._path" class="order-last">
-          {{ navigationLinks.next.title }}
-          <IconCSS name="mdi:arrow-right" class="ms-[.5]" />
-        </NuxtLink>
+        <h4>
+          <NuxtLink :to="navigationLinks.next._path" class="order-last">
+            {{ navigationLinks.next.title }}
+            <IconCSS name="mdi:arrow-right" class="ms-[.5]" />
+          </NuxtLink>
+        </h4>
       </template>
     </div>
   </main>
