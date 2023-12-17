@@ -1,12 +1,26 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
-const latestProject: QueryBuilderParams = { path: '/projects', where: [{ layout: 'article' }], limit: 1, sort: [{ date: -1 }] }
-const latestArticle: QueryBuilderParams = { path: '/blog', where: [{ layout: 'article' }], limit: 1, sort: [{ date: -1 }] }
+
+const latestProject: QueryBuilderParams = { path: '/projects', limit: 1, sort: [{ date: -1 }] }
+const latestArticle: QueryBuilderParams = { path: '/blog', limit: 1, sort: [{ date: -1 }] }
+const waveHand = ref(true);
+
+const computedWaveHandClasses = computed(() => !waveHand.value ? '' : 'animate-wave');
+
+function toggleWaveHand(): void {
+  waveHand.value = !waveHand.value;
+}
 </script>
 
 <template>
   <div>
     <div class="mb-10">
+      <h2 class="flex items-center gap-2">
+        <Icon :class="computedWaveHandClasses" name="👋" @click="toggleWaveHand" role="button" />
+        hi there, this is <span class="italic font-extrabold">Jaw!</span>
+      </h2>
+
       <p>Commodo cubilia aenean odio in ullamcorper ut phasellus amet sociosqu, nulla lectus class curae orci mi
         pretium dignissim. Praesent facilisis purus venenatis malesuada class aliquam ridiculus proin finibus potenti
         quam,
