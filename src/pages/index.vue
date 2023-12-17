@@ -2,8 +2,8 @@
 import { computed } from 'vue';
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
 
-const latestProject: QueryBuilderParams = { path: '/projects', limit: 1, sort: [{ date: -1 }] }
-const latestArticle: QueryBuilderParams = { path: '/articles', limit: 1, sort: [{ date: -1 }] }
+const latestProject: QueryBuilderParams = { path: '/projects', limit: 2, sort: [{ date: -1 }] }
+const latestArticle: QueryBuilderParams = { path: '/articles', limit: 2, sort: [{ date: -1 }] }
 const waveHand = ref(true);
 
 const computedWaveHandClasses = computed(() => !waveHand.value ? '' : 'animate-wave');
@@ -33,36 +33,36 @@ function toggleWaveHand(): void {
     </div>
 
     <div class="mb-10">
-      <h2>latest project</h2>
+      <h2>latest projects</h2>
       <ContentList :query="latestProject" v-slot="{ list }">
         <div v-for="project in list" :key="project._path">
-          <h2 class="flex gap-2 items-baseline">
+          <h3 class="flex gap-2 items-baseline">
             <NuxtLink class="flex gap-1 items-start" style="text-decoration: none !important;" :to="project.demo"
               :title="`${project.title}-demo`" target="_blank">
               <span class="hover:underline"> {{ project.title }} </span>
-              <Icon name="↗" class="!text-sm mt-1" />
+              <Icon name="↗" class="!text-xs mt-1" />
             </NuxtLink>
 
             <NuxtLink
               class="flex justify-center text-[#454545] dark:text-[#d9d9d9] visited:text-current dark:visited:text-current hover:text-black dark:hover:text-white"
               :to="project.github" target="_blank" :title="`${project.title}-source-code`">
-              <IconCSS name="mdi:github" class="text-base" />
+              <IconCSS name="mdi:github" class="text-sm" />
             </NuxtLink>
-          </h2>
+          </h3>
           <p>{{ project.description }}</p>
         </div>
       </ContentList>
     </div>
 
     <div>
-      <h2>latest article</h2>
+      <h2>latest articles</h2>
       <ContentList :query="latestArticle" v-slot="{ list }">
         <div v-for="article in list" :key="article._path">
-          <h2>
+          <h3>
             <NuxtLink :to="article._path">
               {{ article.title }}
             </NuxtLink>
-          </h2>
+          </h3>
           <p>{{ article.description }}</p>
         </div>
       </ContentList>
