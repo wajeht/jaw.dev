@@ -36,11 +36,11 @@ function toggleWaveHand(): void {
       <h2><span class="mr-2">📚</span>latest projects</h2>
       <ContentList :query="latestProject" v-slot="{ list }">
         <div v-for="project in list" :key="project._path">
-          <h3 class="flex gap-2 items-baseline">
-            <NuxtLink class="flex gap-1 items-start" style="text-decoration: none !important;" :to="project.demo"
+          <h3 class="flex gap-2 items-center">
+            <NuxtLink class="flex items-center" style="text-decoration: none !important;" :to="project.demo"
               :title="`${project.title}-demo`" target="_blank">
               <span class="hover:underline"> {{ project.title }} </span>
-              <Icon name="↗" class="!text-sm mt-1" />
+              <IconCSS name="mdi:arrow-top-right" class="text-sm" />
             </NuxtLink>
 
             <NuxtLink

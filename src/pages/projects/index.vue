@@ -7,11 +7,11 @@ const query: QueryBuilderParams = { path: '/projects', limit: 5, sort: [{ date: 
   <main>
     <ContentList :query="query" v-slot="{ list }">
       <div v-for="project in list" :key="project._path">
-        <h2 class="flex gap-2 items-baseline">
-          <NuxtLink class="flex gap-1 items-start" style="text-decoration: none !important;" :to="project.demo"
+        <h2 class="flex gap-2 items-center">
+          <NuxtLink class="flex items-center" style="text-decoration: none !important;" :to="project.demo"
             :title="`${project.title}-demo`" target="_blank">
             <span class="hover:underline"> {{ project.title }} </span>
-            <Icon name="↗" class="!text-base mt-1" />
+            <IconCSS name="mdi:arrow-top-right" class="text-base" />
           </NuxtLink>
 
           <NuxtLink
