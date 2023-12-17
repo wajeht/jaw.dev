@@ -9,9 +9,7 @@ const query: QueryBuilderParams = { path: '/projects', where: [{ layout: 'articl
       <div v-for="project in list" :key="project._path">
         <h2 class="flex gap-2 items-baseline">
           <NuxtLink class="flex gap-1 items-baseline" :to="project.demo" :title="`${project.title}-demo`" target="_blank">
-            <span>
-              {{ project.title }}
-            </span>
+            <span> {{ project.title }} </span>
             <Icon name="↗" class="!text-base" />
           </NuxtLink>
 
