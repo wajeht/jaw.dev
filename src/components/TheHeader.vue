@@ -1,6 +1,6 @@
 <template>
   <header class="mb-10 flex flex-col gap-3">
-    <h1>jaw.<span class="italic">dev</span></h1>
+    <h1>Jaw.<span class="italic">dev</span></h1>
 
     <nav class="flex justify-between">
       <ul class="flex gap-5">
