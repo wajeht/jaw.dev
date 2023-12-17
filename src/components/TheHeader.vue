@@ -1,5 +1,5 @@
 <template>
-  <header class="mb-10 flex flex-col gap-3">
+  <header class="mb-10 flex flex-col gap-5">
     <h1>Jaw.<span class="italic">dev</span></h1>
 
     <nav class="flex justify-between">
