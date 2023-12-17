@@ -11,13 +11,13 @@ const query: QueryBuilderParams = { path: '/projects', limit: 5, sort: [{ date: 
           <NuxtLink class="flex gap-1 items-start" style="text-decoration: none !important;" :to="project.demo"
             :title="`${project.title}-demo`" target="_blank">
             <span class="hover:underline"> {{ project.title }} </span>
-            <Icon name="↗" class="!text-sm mt-1" />
+            <Icon name="↗" class="!text-base mt-1" />
           </NuxtLink>
 
           <NuxtLink
             class="flex justify-center text-[#454545] dark:text-[#d9d9d9] visited:text-current dark:visited:text-current hover:text-black dark:hover:text-white"
             :to="project.github" target="_blank" :title="`${project.title}-source-code`">
-            <IconCSS name="mdi:github" class="text-base" />
+            <IconCSS name="mdi:github" class="text-lg" />
           </NuxtLink>
         </h2>
         <p>{{ project.description }}</p>
