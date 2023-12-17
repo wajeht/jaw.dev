@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import type { NavItem } from '@nuxt/content/dist/runtime/types';
-import { watch, ref } from 'vue';
+import type { NavItem } from '@nuxt/content/dist/runtime/types/index';
+import { computed, ref } from 'vue';
+import { useRoute } from 'vue-router';
 
 const { data } = await useAsyncData('navigation', () => fetchContentNavigation());
 const articles = ref<NavItem[]>([]);
@@ -11,14 +12,14 @@ data.value?.filter((d) => {
   }
 });
 
-const navigation = ref<{ prev: NavItem | null, next: NavItem | null }>({ prev: null, next: null });
 const route = useRoute();
 
-watch(route, (currentRoute) => {
-  const currentIndex = articles.value.findIndex((article) => article._path === currentRoute.path);
-  navigation.value.prev = articles.value[currentIndex - 1] || null;
-  navigation.value.next = articles.value[currentIndex + 1] || null;
-}, { immediate: true });
+const navigation = computed(() => {
+  const currentIndex = articles.value.findIndex((article) => article._path === route.path);
+  const prev = articles.value[currentIndex - 1] || null;
+  const next = articles.value[currentIndex + 1] || null;
+  return { prev, next };
+});
 
 </script>
 
