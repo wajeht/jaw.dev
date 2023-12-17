@@ -33,7 +33,7 @@ function toggleWaveHand(): void {
     </div>
 
     <div class="mb-10">
-      <h2>latest projects</h2>
+      <h2><span class="mr-2">📚</span>latest projects</h2>
       <ContentList :query="latestProject" v-slot="{ list }">
         <div v-for="project in list" :key="project._path">
           <h3 class="flex gap-2 items-baseline">
@@ -55,7 +55,7 @@ function toggleWaveHand(): void {
     </div>
 
     <div>
-      <h2>latest articles</h2>
+      <h2><span class="mr-2">📝</span>latest articles</h2>
       <ContentList :query="latestArticle" v-slot="{ list }">
         <div v-for="article in list" :key="article._path">
           <h3>
