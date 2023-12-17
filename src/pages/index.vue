@@ -15,7 +15,7 @@ function toggleWaveHand(): void {
 
 <template>
   <div>
-    <div class="mb-10">
+    <div class="mb-8">
       <h2 class="flex items-center gap-2">
         <Icon :class="computedWaveHandClasses" name="👋" @click="toggleWaveHand" role="button" />
         hi there, this is <span class="italic font-extrabold">Jaw!</span>
@@ -32,7 +32,7 @@ function toggleWaveHand(): void {
       </p>
     </div>
 
-    <div class="mb-10">
+    <div class="mb-8">
       <h2><span class="mr-2">📚</span>latest projects</h2>
       <ContentList :query="latestProject" v-slot="{ list }">
         <div v-for="project in list" :key="project._path">
