@@ -2,8 +2,8 @@
 import { computed } from 'vue';
 const { prev, next } = useContent();
 
-const computedPrev = computed(() => prev.value && prev.value._path.includes('/blog'));
-const computedNext = computed(() => next.value && next.value._path.includes('/blog'));
+const computedPrev = computed(() => prev.value && prev.value._path.includes('/articles'));
+const computedNext = computed(() => next.value && next.value._path.includes('/articles'));
 </script>
 
 <template>
