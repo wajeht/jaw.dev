@@ -30,22 +30,33 @@ function toggleWaveHand(): void {
         </li>
       </ul>
 
-      <div class="flex gap-5">
-        <NuxtLink class="flex items-center justify-center text-[#454545] dark:text-[#d9d9d9] visited:text-current dark:visited:text-current hover:text-black dark:hover:text-white" to="https://www.linkedin.com/in/kyawsny/" target="_blank"
-          title="linkedin">
+      <div class="flex gap-3">
+        <NuxtLink external
+          class="flex items-center justify-center text-[#454545] dark:text-[#d9d9d9] visited:text-current dark:visited:text-current hover:text-black dark:hover:text-white"
+          to="mailto:kaywsny@gmail.com" title="email">
+          <IconCSS name="mdi:email" class="text-base" />
+        </NuxtLink>
+
+        <NuxtLink external
+          class="flex items-center justify-center text-[#454545] dark:text-[#d9d9d9] visited:text-current dark:visited:text-current hover:text-black dark:hover:text-white"
+          to="https://www.linkedin.com/in/kyawsny/" target="_blank" title="linkedin">
           <IconCSS name="mdi:linkedin" class="text-base" />
         </NuxtLink>
 
-        <NuxtLink class="flex items-center justify-center text-[#454545] dark:text-[#d9d9d9] visited:text-current dark:visited:text-current hover:text-black dark:hover:text-white" to="https://github.com/wajeht" target="_blank" title="github">
+        <NuxtLink external
+          class="flex items-center justify-center text-[#454545] dark:text-[#d9d9d9] visited:text-current dark:visited:text-current hover:text-black dark:hover:text-white"
+          to="https://github.com/wajeht" target="_blank" title="github">
           <IconCSS name="mdi:github" class="text-base" />
         </NuxtLink>
 
         <button class="flex items-center" v-if="$colorMode.value === 'dark'" @click="$colorMode.preference = 'light'">
-          <IconCSS name="material-symbols:sunny-rounded" class="text-sm text-[#454545] dark:text-[#d9d9d9] hover:text-black dark:hover:text-white" />
+          <IconCSS name="material-symbols:sunny-rounded"
+            class="text-sm text-[#454545] dark:text-[#d9d9d9] hover:text-black dark:hover:text-white" />
         </button>
 
         <button class="flex items-center" v-if="$colorMode.value === 'light'" @click="$colorMode.preference = 'dark'">
-          <IconCSS name="material-symbols:dark-mode-outline-rounded" class="text-base text-[#454545] dark:text-[#d9d9d9] hover:text-black dark:hover:text-white" />
+          <IconCSS name="material-symbols:dark-mode-outline-rounded"
+            class="text-base text-[#454545] dark:text-[#d9d9d9] hover:text-black dark:hover:text-white" />
         </button>
       </div>
     </nav>
