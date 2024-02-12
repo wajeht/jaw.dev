@@ -27,20 +27,23 @@
     "schema": "./src/server/database/schema.prisma",
     "seed": "npx tsx ./src/server/database/seeds/seed.ts"
   },
+  "overrides": {
+    "@parcel/watcher": "2.1.0"
+  },
   "devDependencies": {
-    "@nuxt/content": "^2.9.0",
-    "@nuxt/devtools": "^1.0.6",
-    "@nuxt/image": "^1.1.0",
+    "@nuxt/content": "^2.12.0",
+    "@nuxt/devtools": "^1.0.8",
+    "@nuxt/image": "^1.3.0",
     "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/google-fonts": "^3.1.3",
     "@nuxtjs/plausible": "^0.2.4",
     "@nuxtjs/robots": "^3.0.0",
-    "@nuxtjs/tailwindcss": "^6.10.1",
+    "@nuxtjs/tailwindcss": "^6.11.4",
     "@tailwindcss/typography": "^0.5.10",
-    "@vueuse/nuxt": "^10.7.0",
-    "nuxt": "^3.8.2",
+    "@vueuse/nuxt": "^10.7.2",
+    "nuxt": "^3.10.1",
     "nuxt-auth-utils": "^0.0.13",
-    "nuxt-icon": "^0.6.7",
+    "nuxt-icon": "^0.6.8",
     "nuxt-vitest": "^0.11.5",
     "vue": "^3.3.12",
     "vue-router": "^4.2.5"
