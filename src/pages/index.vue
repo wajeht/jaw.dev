@@ -54,7 +54,7 @@ function toggleWaveHand(): void {
       </ContentList>
     </div>
 
-    <div>
+    <!-- <div>
       <h2><span class="mr-2">📝</span>latest articles</h2>
       <ContentList :query="latestArticle" v-slot="{ list }">
         <div v-for="article in list" :key="article._path">
@@ -66,7 +66,7 @@ function toggleWaveHand(): void {
           <p>{{ article.description }}</p>
         </div>
       </ContentList>
-    </div>
+    </div> -->
 
   </div>
 </template>
