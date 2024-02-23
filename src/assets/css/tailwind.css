@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.domain {
+  @apply !text-[#454545] dark:!text-[#d9d9d9] transition-all duration-300 hover:underline;
+}
+
 body {
   font-family: "Open Sans", sans-serif, Arial;
   @apply text-[#454545] dark:bg-black dark:text-[#d9d9d9] bg-[#fefefe] text-base overflow-auto transition-all duration-300;

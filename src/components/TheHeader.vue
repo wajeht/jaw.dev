@@ -1,6 +1,8 @@
 <template>
   <header class="mb-7 flex flex-col gap-3">
-    <h1>Jaw.<span class="italic">dev</span></h1>
+    <NuxtLink to="/" class="domain">
+      <h1>Jaw.<span class="italic">dev</span></h1>
+    </NuxtLink>
 
     <nav class="flex justify-between">
       <ul class="flex gap-5">
